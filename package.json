@@ -1,0 +1,19 @@
+{
+  "name": "traffico",
+  "version": "1.0.0",
+  "description": "Traffico",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexmarcus22/Trafico.git"
+  },
+  "author": "Alexandru Marcus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexmarcus22/Trafico/issues"
+  },
+  "homepage": "https://github.com/alexmarcus22/Trafico#readme"
+}
