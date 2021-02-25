@@ -1,0 +1,21 @@
+.header-component {
+  margin-bottom: 10rem;
+
+  .navbar {
+    padding-top: 5.4rem;
+
+    .navbar-collapse {
+      flex-grow: 0;
+
+      .navbar-nav {
+        align-items: center;
+        .nav-item:not(:last-of-type) {
+          padding: 0 4.8rem;
+        }
+        .nav-item:last-of-type {
+          padding: 0 3.8rem;
+        }
+      }
+    }
+  }
+}

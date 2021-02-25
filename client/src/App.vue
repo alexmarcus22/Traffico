@@ -1,5 +1,5 @@
 <template>
-  <heroComponent />
+	<heroComponent />
 </template>
 
 <style lang='scss'>
@@ -10,9 +10,9 @@
 import heroComponent from "./page/components/hero.component.vue";
 
 export default {
-  name: "App",
-  components: {
-    heroComponent,
-  },
+	name: "App",
+	components: {
+		heroComponent,
+	},
 };
 </script>

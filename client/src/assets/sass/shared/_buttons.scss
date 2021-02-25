@@ -1,0 +1,17 @@
+.primary-button {
+  border-radius: 0.5rem;
+  background-color: $accent;
+  padding: 2rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  img {
+    padding-left: 2.4rem;
+    width: 48px;
+    height: 12px;
+  }
+}
