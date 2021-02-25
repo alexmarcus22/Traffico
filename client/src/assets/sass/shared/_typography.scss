@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
 a {
   &.nav-link {
@@ -9,5 +9,17 @@ a {
     font-weight: 600;
     letter-spacing: 0.05em;
     line-height: 1.9rem;
+    cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      font-size: 3rem;
+      line-height: normal;
+    }
+  }
+
+  .nav-item & {
+    .sidebar-component & {
+      color: $black;
+    }
   }
 }

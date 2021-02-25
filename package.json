@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/alexmarcus22/Trafico/issues"
   },
-  "homepage": "https://github.com/alexmarcus22/Trafico#readme"
+  "homepage": "https://github.com/alexmarcus22/Trafico#readme",
+  "dependencies": {
+    "mitt": "^2.1.0",
+    "vue-tasty-burgers": "^1.2.3"
+  }
 }

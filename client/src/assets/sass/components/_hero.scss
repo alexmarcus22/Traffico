@@ -1,21 +1,50 @@
 .hero-component {
-  background-image: url("assets/images/hero.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: auto;
 
-  .page-content {
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("assets/images/hero.svg");
+    width: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 767px) {
+      background-position: 50%;
+    }
+  }
+
+  .navigation-component {
+    padding-top: 5.4rem;
+
+    @media screen and (max-width: 767px) {
+      padding-top: .4rem;
+    }
+  }
+
+  .hero-container {
     margin-bottom: 18rem;
     .title {
       font-size: 10rem;
       color: $white;
-      max-width: 74rem;
       font-family: "DM Serif Display";
       font-style: normal;
       font-weight: normal;
-      font-size: 100px;
-      line-height: 100%;
-      margin-bottom: 6rem;
+      font-size: 12rem;
+      line-height: 13rem;
+      margin-bottom: 7rem;
     }
+  }
+
+  .mobile {
+    position: absolute;
+    left: 0;
   }
 }
