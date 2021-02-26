@@ -23,3 +23,21 @@ a {
     }
   }
 }
+
+h1 {
+  font-size: 11rem;
+  color: $white;
+  font-family: "DM Serif Display";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 13rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 4.2rem;
+  text-transform: uppercase;
+  color: $accent;
+  letter-spacing: 0.1em;
+}
