@@ -1,0 +1,23 @@
+.about-component {
+  position: relative;
+  padding: 11rem;
+
+  .about-container {
+    .content {
+      padding-top: 12.6rem;
+
+      .subtitle {
+        margin-bottom: 4rem;
+      }
+
+      .description {
+        font-weight: 100;
+        font-size: 1.8rem;
+        line-height: 4rem;
+        max-width: 47rem;
+        margin-bottom: 7rem;
+        color: $text;
+      }
+    }
+  }
+}

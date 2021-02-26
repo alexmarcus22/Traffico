@@ -1,7 +1,11 @@
 html {
   color: $black;
-  font-size: .5vw;
+  font-size: 10px;
   height: 100%;
+
+  @media screen and (max-width: 767px) {
+    font-size: 10px;
+  }
 }
 
 body {
@@ -12,8 +16,22 @@ body {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
   height: 100%;
+
+  &.noscrollbar {
+    position: fixed;
+  }
 }
 
 .container {
-	max-width: 70vw;
+  max-width: 70vw;
+
+  @media screen and (max-width: 767px) {
+    max-width: 100%;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.scroll {
+  overflow: hidden;
 }

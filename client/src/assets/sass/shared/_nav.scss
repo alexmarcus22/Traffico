@@ -1,9 +1,7 @@
-.header-component {
+.navigation-component {
   margin-bottom: 10rem;
 
-  .navbar {
-    padding-top: 5.4rem;
-
+  &.navbar {
     .navbar-collapse {
       flex-grow: 0;
 
@@ -15,6 +13,15 @@
         .nav-item:last-of-type {
           padding: 0 3.8rem;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .navbar-brand {
+      img {
+        height: 5rem;
+        width: 18rem;
       }
     }
   }

@@ -1,21 +1,33 @@
 .hero-component {
-  background-image: url("assets/images/hero.svg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: auto;
+  background-image: url("assets/images/hero.svg");
+  position: relative;
+  width: auto;
+  height: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
 
-  .page-content {
+  @media screen and (max-width: 767px) {
+    background-size: 80rem;
+  }
+
+  .navigation-component {
+    padding-top: 5.4rem;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 0.4rem;
+    }
+  }
+
+  .hero-container {
     margin-bottom: 18rem;
     .title {
-      font-size: 10rem;
-      color: $white;
-      max-width: 74rem;
-      font-family: "DM Serif Display";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 100px;
-      line-height: 100%;
-      margin-bottom: 6rem;
+      margin-bottom: 7rem;
     }
   }
 }

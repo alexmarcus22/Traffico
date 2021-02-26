@@ -1,63 +1,57 @@
 <template>
-	<header class="header-component">
-		<div class="container">
-			<nav class="navbar navbar-expand-lg transparent d-flex">
-				<div class="container-fluid">
-					<a class="navbar-brand mr-auto" href="#">
-						<img :src="getURL()" alt="" />
-					</a>
-					<div
-						class="collapse navbar-collapse ml-auto"
-						id="navbarSupportedContent"
-					>
-						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">About</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">How to</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#">FAQS</a>
-							</li>
-							<li class="nav-item">
-								<button class="btn primary-button">Contact Us</button>
-							</li>
-						</ul>
-					</div>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarSupportedContent"
-						aria-controls="navbarSupportedContent"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-				</div>
-			</nav>
+	<nav
+		class="navigation-component navbar navbar-expand-lg transparent d-flex col-12"
+	>
+		<a class="navbar-brand mr-auto" href="#">
+			<img :src="getURL()" alt="" />
+		</a>
+		<div class="collapse navbar-collapse" id="navbar">
+			<div
+				class="sidebar-backdrop"
+				@click="closeSidebarPanel"
+				v-if="isPanelOpen"
+			></div>
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#about-us">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">How to</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#">FAQS</a>
+				</li>
+				<li class="nav-item">
+					<button class="btn primary-button">Contact Us</button>
+				</li>
+			</ul>
 		</div>
-	</header>
+		<Hamburger></Hamburger>
+	</nav>
 </template>
 
 <script>
+import Hamburger from "../components/hamburger.component.vue";
+
 export default {
 	name: "Header Component",
 	props: {
 		msg: String,
 	},
+	components: {
+		Hamburger
+	},
 	data() {
 		return {
 			title: "Title",
 			imgPath: require("../../assets/images/logo.svg"),
+			isPanelOpen: false
 		};
 	},
 	methods: {
 		getURL() {
 			return this.imgPath;
-		},
+		}
 	},
 };
 </script>
