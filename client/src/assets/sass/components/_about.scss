@@ -4,7 +4,10 @@
 
   .about-container {
     .content {
-      padding-top: 12.6rem;
+      padding-top: 6rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
 
       .subtitle {
         margin-bottom: 4rem;

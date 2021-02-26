@@ -11,7 +11,6 @@
 					</p>
 					<slot name="cardBody"></slot>
 				</div>
-				<div></div>
 				<div class="col-6 image" :data-aos="dataImg">
 					<slot name="image"> </slot>
 				</div>
@@ -25,7 +24,7 @@ import AOS from "aos";
 AOS.init();
 
 export default {
-	name: "AboutUs Component",
+	name: "Details Component",
 	props: {
 		reverse: Boolean,
 		dataText: String,
