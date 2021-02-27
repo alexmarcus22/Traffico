@@ -60,6 +60,38 @@
 			</template>
 		</details-component>
 		<faq-component></faq-component>
+		<footer-component dataMobileText="fade-right">
+			<template v-slot:secondMobile>
+				<img
+					:src="require('./assets/images/secondmobil.svg')"
+					alt=""
+					srcset=""
+				/>
+			</template>
+			<template v-slot:footerSVG1>
+				<img :src="require('./assets/images/footer2.svg')" alt="" srcset="" />
+			</template>
+			<template v-slot:footerSVG2>
+				<img :src="require('./assets/images/footer3.svg')" alt="" srcset="" />
+			</template>
+			<template v-slot:lineSVG>
+				<img
+					:src="require('./assets/images/line-footer.svg')"
+					alt=""
+					srcset=""
+				/>
+			</template>
+			<contact-component>
+				<template v-slot:cardBody>
+					<div class="card card-component">
+						<div class="card-body">
+							We provide traffic management consultants so you get started
+							quickly, contact us for a quote today!
+						</div>
+					</div>
+				</template>
+			</contact-component>
+		</footer-component>
 	</div>
 	{{ entries.title }}
 </template>
@@ -73,6 +105,8 @@ import Sidebar from "./page/components/sidebar.component.vue";
 import Hero from "./page/components/hero.component.vue";
 import Details from "./page/components/details.component.vue";
 import FAQ from "./page/components/faq.component.vue";
+import Footer from "./page/shared/footer.component.vue";
+import Contact from "./page/components/contact.component.vue";
 import eventBus from "./store";
 import SPA from "./assets/js/SPA.json";
 
@@ -83,6 +117,8 @@ export default {
 		"sidebar-component": Sidebar,
 		"details-component": Details,
 		"faq-component": FAQ,
+		"footer-component": Footer,
+		"contact-component": Contact,
 	},
 	data: () => ({
 		entries: {},
