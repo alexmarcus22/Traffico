@@ -15,16 +15,27 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="faq-container row">
+			<div class="row faq-container mb-2">
 				<div class="col-6">
-					<collapse-component target="collapse1"></collapse-component>
-					<collapse-component target="collapse2"></collapse-component>
-					<collapse-component target="collapse3"></collapse-component>
+					<accordion-component target="collapse1"></accordion-component>
+					<accordion-component target="collapse2"></accordion-component>
+					<accordion-component target="collapse3"></accordion-component>
+					<accordion-component target="collapse4"></accordion-component>
 				</div>
 				<div class="col-6">
-					<collapse-component target="collapse4"></collapse-component>
-					<collapse-component target="collapse5"></collapse-component>
-					<collapse-component target="collapse6"></collapse-component>
+					<accordion-component target="collapse5"></accordion-component>
+					<accordion-component target="collapse6"></accordion-component>
+					<accordion-component target="collapse7"></accordion-component>
+					<accordion-component target="collapse8"></accordion-component>
+					<accordion-component target="collapse9"></accordion-component>
+					<accordion-component target="collapse10"></accordion-component>
+				</div>
+			</div>
+			<div class="row faq-container">
+				<div class="col-md-6 offset-md-6">
+					<div class="load-more">
+						<button class="btn secondary-button">Load More</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -33,7 +44,7 @@
 
 <script>
 import AOS from "aos";
-import Collapse from "./collapse.component.vue";
+import Accordion from "./accordion.component.vue";
 AOS.init();
 
 export default {
@@ -44,7 +55,7 @@ export default {
 		dataImg: String,
 	},
 	components: {
-		"collapse-component": Collapse,
+		"accordion-component": Accordion,
 	},
 	data() {
 		return {

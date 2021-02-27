@@ -1,0 +1,21 @@
+.contact-component {
+  .contact-container {
+    .card-component {
+      background: transparent;
+      max-width: 40rem;
+      .card-body {
+        background: transparent;
+        color: $white;
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 300;
+      }
+    }
+
+    .card-contact {
+      position: relative;
+      top: -25rem;
+      max-width: unset;
+    }
+  }
+}

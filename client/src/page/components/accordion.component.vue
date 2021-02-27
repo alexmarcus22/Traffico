@@ -1,5 +1,5 @@
 <template>
-	<div class="collapse-component">
+	<div class="accordion-component">
 		<button
 			class="btn collapse-button"
 			type="button"
@@ -11,7 +11,7 @@
 			What is a professional traffic permit?
 		</button>
 		<div class="collapse" :id="target">
-			<div class="card card-body">
+			<div class="card card-body card-collapse">
 				Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
 				terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
 				labore wes anderson cred nesciunt sapiente ea proident.
