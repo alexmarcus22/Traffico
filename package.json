@@ -4,7 +4,7 @@
   "description": "Traffico",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js"
+    "dev": "(cd client && npm install); (cd server && npm install); (node app.js)"
   },
   "repository": {
     "type": "git",
