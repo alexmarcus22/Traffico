@@ -3,23 +3,25 @@
 		<sidebar-component>
 			<ul class="nav flex-column">
 				<li class="nav-item">
-					<a class="nav-link active" @click="hideAndScrollTo('about-us')"
-						>About</a
+					<a class="nav-link active" @click="hideAndScrollTo('about')">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" @click="hideAndScrollTo('howTo')"
+						>How to</a
 					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">How to</a>
+					<a class="nav-link" href="#" @click="hideAndScrollTo('faq')">FAQS</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">FAQS</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact Us</a>
+					<a class="nav-link" href="#" @click="hideAndScrollTo('contact')"
+						>Contact Us</a
+					>
 				</li>
 			</ul>
 		</sidebar-component>
 		<hero-component />
-		<details-component :reverse="false" dataImg="fade-left">
+		<details-component :reverse="false" dataImg="fade-left" id="about">
 			<template v-slot:subtitle> About Us </template>
 			<template v-slot:description>
 				The occupational traffic permit is one of the most important things in
@@ -42,7 +44,7 @@
 				/>
 			</template>
 		</details-component>
-		<details-component :reverse="true" dataText="fade-right">
+		<details-component :reverse="true" dataText="fade-right" id="howTo">
 			<template v-slot:subtitle> How To Apply </template>
 			<template v-slot:description>
 				When applying for a traffic permit, there are certain requirements that
@@ -81,7 +83,7 @@
 					srcset=""
 				/>
 			</template>
-			<contact-component>
+			<contact-component dataContactText="fade-left">
 				<template v-slot:cardBody>
 					<div class="card card-component">
 						<div class="card-body">
@@ -109,6 +111,8 @@ import Footer from "./page/shared/footer.component.vue";
 import Contact from "./page/components/contact.component.vue";
 import eventBus from "./store";
 import SPA from "./assets/js/SPA.json";
+import AOS from "aos";
+AOS.init();
 
 export default {
 	name: "App",
@@ -133,7 +137,7 @@ export default {
 			var el = document.getElementById(ref);
 			setTimeout(() => {
 				el.scrollIntoView({ behavior: "smooth", block: "center" });
-			}, 100);
+			}, 200);
 		},
 	},
 	mounted() {

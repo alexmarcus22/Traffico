@@ -1,8 +1,8 @@
 <template>
-	<section class="about-component" id="about-us">
+	<section :id="idName" :class="nameComp + '-component'">
 		<div class="container">
 			<div class="about-container row" :class="{ 'flex-row-reverse': reverse }">
-				<div class="col-6 content" :data-aos="dataText">
+				<div class="col-12 col-xl-6 content" :data-aos="dataText">
 					<h2 class="subtitle">
 						<slot name="subtitle"> </slot>
 					</h2>
@@ -11,7 +11,7 @@
 					</p>
 					<slot name="cardBody"></slot>
 				</div>
-				<div class="col-6 image" :data-aos="dataImg">
+				<div class="col-12 col-xl-6 image" :data-aos="dataImg">
 					<slot name="image"> </slot>
 				</div>
 			</div>
@@ -20,8 +20,6 @@
 </template>
 
 <script>
-import AOS from "aos";
-AOS.init();
 
 export default {
 	name: "Details Component",
@@ -29,14 +27,14 @@ export default {
 		reverse: Boolean,
 		dataText: String,
 		dataImg: String,
+		idName: String
 	},
-	data() {
-		return {
-			buttonUnion: require("../../assets/images/union.svg"),
-			mobileView: false,
-			showNav: false,
-		};
-	},
+	data: () => ({
+		buttonUnion: require("../../assets/images/union.svg"),
+		mobileView: false,
+		showNav: false,
+		nameComp: "about",
+	}),
 	methods: {
 		union() {
 			return this.buttonUnion;

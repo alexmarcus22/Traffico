@@ -11,7 +11,15 @@
     height: 100%;
     width: 100%;
   }
+
   .faq-container {
+    position: relative;
+    left: -10rem;
+
+    @media screen and (max-width: 991px) {
+      left: 0;
+      padding-top: 5rem;
+    }
     .content {
       display: flex;
       justify-content: center;
@@ -27,10 +35,32 @@
         line-height: 140%;
       }
     }
-    
+
+    .image {
+      position: relative;
+      left: 20rem;
+      @media screen and (max-width: 767px) {
+        left: 0;
+        padding-top: 5rem;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
     .load-more {
       margin-left: -5px;
       margin-right: -5px;
+    }
+
+    @media screen and (max-width: 767px) {
+      & > .col-12 {
+        .accordion-component {
+          margin-bottom: 1.6rem;
+        }
+      }
     }
   }
 }
