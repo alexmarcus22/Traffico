@@ -24,3 +24,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Email: alexandru.mrcu@yahoo.com
+Site Live: https://unruffled-kirch-784e05.netlify.app/
