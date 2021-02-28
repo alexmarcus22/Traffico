@@ -1,20 +1,18 @@
 <template>
 	<div class="accordion-component">
 		<button
-			class="btn collapse-button"
+			class="btn collapse-button accordion-button"
 			type="button"
 			data-toggle="collapse"
 			:data-target="'#' + target"
 			aria-expanded="false"
 			:aria-controls="target"
 		>
-			What is a professional traffic permit?
+			{{ accordionTitle }}
 		</button>
 		<div class="collapse" :id="target">
 			<div class="card card-body card-collapse">
-				Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-				terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-				labore wes anderson cred nesciunt sapiente ea proident.
+				{{ accordionDescription }}
 			</div>
 		</div>
 	</div>
@@ -22,10 +20,12 @@
 
 <script>
 export default {
-  namer: "Collapse Component",
-  props: {
-    target: String
-  }
+	namer: "Collapse Component",
+	props: {
+		target: String,
+		accordionTitle: String,
+		accordionDescription: String
+	},
 };
 </script>
 
