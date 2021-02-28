@@ -1,7 +1,7 @@
 <template>
 	<section class="footer-component" id="footer">
 		<svg class="svg">
-			<clipPath id="my-clip-path" clipPathUnits="objectBoundingBox">
+			<clipPath id="clipPathFooter" clipPathUnits="objectBoundingBox">
 				<path
 					d="M0.925,0.001 H-0.004 V1 H0.996 V0.152 C0.996,0.069,0.964,0.001,0.925,0.001"
 				></path>
@@ -22,37 +22,43 @@
 		</div>
 		<slot></slot>
 		<div class="container">
-			<div class="row footer-container footer-links">
-				<div class="col-5">
+			<div
+				class="row footer-container footer-links flex-column-reverse flex-md-row"
+			>
+				<div class="col-12 col-xl-5">
 					<a class="" href="#">
-						<img :src="getURL('logo')" alt="" />
+						<img :src="getURL('logo')" alt="logo" />
 					</a>
 				</div>
-				<div class="col-7">
-					<ul class="list-inline">
-						<li class="list-inline-item">About</li>
-						<li class="list-inline-item">How To</li>
-						<li class="list-inline-item">FAQS</li>
+				<div class="col-12 col-xl-7">
+					<ul class="list-inline flex-xl-row flex-column">
+						<li class="list-inline-item">
+							<a href="#about">About</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#howTo">How To</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="#faq">FAQS </a>
+						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="row footer-container footer-copyright">
 				<div class="col-6 d-flex">
-          <span class="copyright align-self-center">
-            Copyright @ 2019
-          </span>
-        </div>
+					<span class="copyright align-self-center"> Copyright @ 2021 </span>
+				</div>
 				<div class="col-6">
 					<ul class="list-inline social-links">
 						<li>
-              <img :src="getURL('facebook')" alt="">
-            </li>
+							<a href=""><img :src="getURL('facebook')" alt="facebook" /></a>
+						</li>
 						<li>
-              <img :src="getURL('instagram')" alt="">
-            </li>
+							<a href=""><img :src="getURL('instagram')" alt="instagram" /></a>
+						</li>
 						<li>
-              <img :src="getURL('twitter')" alt="">
-            </li>
+							<a href=""><img :src="getURL('twitter')" alt="twitter" /></a>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -66,41 +72,30 @@ export default {
 	props: {
 		dataMobileText: String,
 	},
-	data() {
-		return {
-			title: "Title",
-			imgPath: require("../../assets/images/logo.svg"),
-      facebookPath: require("../../assets/images/facebook.svg"),
-      instagramPath: require("../../assets/images/instagram.svg"),
-      twitterPath: require("../../assets/images/twitter.svg"),
-			isPanelOpen: false,
-		};
-	},
+	data: () => ({
+		title: "Title",
+		imgPath: require("../../assets/images/logo.svg"),
+		facebookPath: require("../../assets/images/facebook.svg"),
+		instagramPath: require("../../assets/images/instagram.svg"),
+		twitterPath: require("../../assets/images/twitter.svg"),
+		isPanelOpen: false,
+	}),
 	methods: {
 		getURL(string) {
 			switch (string) {
-        case 'facebook':
-          return this.facebookPath
-        case 'instagram':
-          return this.instagramPath
-        case 'twitter':
-          return this.twitterPath
-        case 'logo':
-          return this.imgPath
-      
-        default:
-          break;
-      }
+				case "facebook":
+					return this.facebookPath;
+				case "instagram":
+					return this.instagramPath;
+				case "twitter":
+					return this.twitterPath;
+				case "logo":
+					return this.imgPath;
+
+				default:
+					break;
+			}
 		},
-		// getURL() {
-		// 	return this.imgPath;
-		// },
-		// getURL() {
-		// 	return this.imgPath;
-		// },
-		// getURL() {
-		// 	return this.imgPath;
-		// },
 	},
 };
 </script>

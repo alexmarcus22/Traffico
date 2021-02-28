@@ -9,19 +9,35 @@
     min-height: 70rem;
     background: #0f264c;
     background-size: cover;
-    clip-path: url(#my-clip-path);
+    clip-path: url(#clipPathFooter);
     position: absolute;
     top: 0;
     border: 0;
     bottom: 0;
     left: 0;
     right: 0;
+
+    @media screen and (max-width: 767px) {
+      width: auto;
+      max-width: unset;
+      left: -153rem;
+      min-height: 118rem;
+    }
   }
 
   #secondMobile {
     position: absolute;
     top: -14rem;
     z-index: 2;
+
+    @media screen and (max-width: 767px) {
+      top: -10rem;
+      width: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   #footerSVG {
@@ -30,12 +46,24 @@
     left: 18rem;
     top: -5rem;
     z-index: 1;
+
+    @media screen and (max-width: 767px) {
+      left: 2rem;
+    }
   }
 
   #footerSVG2 {
     position: absolute;
     top: 0;
     z-index: 3;
+
+    @media screen and (max-width: 767px) {
+      max-width: 11rem;
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .line-svg {
@@ -46,6 +74,11 @@
 
     img {
       width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      top: 40rem;
     }
   }
 
@@ -69,10 +102,25 @@
           padding: 1.3rem 5rem;
         }
       }
+
+      @media screen and (max-width: 767px) {
+        &-item {
+          padding: 1.2rem 0 !important;
+          font-size: 1.9rem;
+        }
+      }
     }
 
     &.footer-links {
-      margin-bottom: 17rem;
+      margin-bottom: 12rem;
+      @media screen and (max-width: 767px) {
+        text-align: center;
+        margin-bottom: 10rem;
+        a {
+          margin-bottom: 1.4rem;
+          text-align: center;
+        }
+      }
     }
 
     &.footer-copyright {

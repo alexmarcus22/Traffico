@@ -1,6 +1,10 @@
 .navigation-component {
   margin-bottom: 10rem;
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 3.2rem;
+  }
+
   &.navbar {
     .navbar-collapse {
       flex-grow: 0;

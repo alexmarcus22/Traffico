@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="row">
 				<header-component v-if="!mobileView"></header-component>
-				<div class="hero-container col-7">
+				<div class="hero-container col-12 col-md-7">
 					<h1 class="title">Your awesome traffic permit consultant.</h1>
 					<button class="btn primary-button">
 						Get Started
@@ -28,14 +28,12 @@ export default {
 	props: {
 		msg: String,
 	},
-	data() {
-		return {
+	data: () => ({
 			buttonUnion: require("../../assets/images/union.svg"),
 			car: require("../../assets/images/car.svg"),
 			mobileView: false,
 			showNav: false,
-		};
-	},
+	}),
 	components: {
 		headerComponent,
 	},

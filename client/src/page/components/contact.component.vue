@@ -1,47 +1,41 @@
 <template>
-	<section class="contact-component" id="contactUs">
+	<section class="contact-component" id="contact">
 		<div class="container">
 			<div class="row contact-container">
-				<div class="col-5">
+				<div class="col-12 col-xl-5">
 					<slot name="cardBody"> </slot>
 				</div>
-				<div class="col-7">
-					<div class="card-contact">
+				<div class="col-12 col-xl-7">
+					<div class="card-contact" :data-aos="dataContactText">
 						<div class="card-body">
-							<form>
+							<form
+								@submit.prevent="TestMessage"
+								class="contact-form"
+								method="GET"
+							>
 								<div class="form-group">
-									<label for="exampleInputEmail1">Email address</label>
+									<label for="name1">Name</label>
+									<input
+										type="text"
+										class="form-control"
+										id="name1"
+										placeholder="Enter email"
+										value="Hendrik Larsson"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="emailAdress">Email Adress</label>
 									<input
 										type="email"
 										class="form-control"
-										id="exampleInputEmail1"
-										aria-describedby="emailHelp"
-										placeholder="Enter email"
-									/>
-									<small id="emailHelp" class="form-text text-muted"
-										>We'll never share your email with anyone else.</small
-									>
-								</div>
-								<div class="form-group">
-									<label for="exampleInputPassword1">Password</label>
-									<input
-										type="password"
-										class="form-control"
-										id="exampleInputPassword1"
-										placeholder="Password"
+										id="emailAdress"
+										placeholder="Your email address"
 									/>
 								</div>
-								<div class="form-check">
-									<input
-										type="checkbox"
-										class="form-check-input"
-										id="exampleCheck1"
-									/>
-									<label class="form-check-label" for="exampleCheck1"
-										>Check me out</label
-									>
-								</div>
-								<button type="submit" class="btn btn-primary">Submit</button>
+								<button type="submit " class="btn primary-button">
+									Get Started
+									<img :src="union()" alt="" />
+								</button>
 							</form>
 						</div>
 					</div>
@@ -52,8 +46,32 @@
 </template>
 
 <script>
+import AOS from "aos";
+AOS.init({
+	disable: function () {
+		return window.innerWidth < 800;
+	},
+});
+
 export default {
-	name: "Contact Us Component",
+	name: "ContactUs Component",
+	props: {
+		dataContactText: String,
+	},
+	data: () => ({
+		unionImg: require("../../assets/images/union.svg"),
+	}),
+	methods: {
+		TestMessage() {
+			alert("Work In Progress");
+		},
+		union() {
+			return this.unionImg;
+		},
+	},
+	mounted() {
+		console.log(this.dataContactText);
+	},
 };
 </script>
 
