@@ -15,26 +15,25 @@
 			</div>
 		</div>
 		<div class="container">
-			<div class="row faq-container mb-2">
-				<div class="col-12 col-xl-6">
-					<accordion-component target="collapse1"></accordion-component>
-					<accordion-component target="collapse2"></accordion-component>
-					<accordion-component target="collapse3"></accordion-component>
-					<accordion-component target="collapse4"></accordion-component>
-				</div>
-				<div class="col-12 col-xl-6">
-					<accordion-component target="collapse5"></accordion-component>
-					<accordion-component target="collapse6"></accordion-component>
-					<accordion-component target="collapse7"></accordion-component>
-					<accordion-component target="collapse8"></accordion-component>
-					<accordion-component target="collapse9"></accordion-component>
-					<accordion-component target="collapse10"></accordion-component>
+			<div class="row faq-container accordions">
+				<div
+					v-for="(accordion, key) in accordionComponents"
+					:key="key"
+					class="col-12 col-md-6"
+				>
+					<accordion-component
+						:target="'collapse' + key"
+						:accordionTitle="accordion.title"
+						:accordionDescription="accordion.description"
+					></accordion-component>
 				</div>
 			</div>
 			<div class="row faq-container">
 				<div class="col-md-6 offset-md-6">
 					<div class="load-more">
-						<button class="btn secondary-button accordion-button">Load More</button>
+						<button class="btn secondary-button accordion-button">
+							Load More
+						</button>
 					</div>
 				</div>
 			</div>
@@ -51,6 +50,7 @@ export default {
 		reverse: Boolean,
 		dataText: String,
 		dataImg: String,
+		accordionComponents: Object,
 	},
 	components: {
 		"accordion-component": Accordion,

@@ -68,10 +68,7 @@ export default {
 		union() {
 			return this.unionImg;
 		},
-	},
-	mounted() {
-		console.log(this.dataContactText);
-	},
+	}
 };
 </script>
 

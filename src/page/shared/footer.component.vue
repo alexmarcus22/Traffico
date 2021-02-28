@@ -51,13 +51,13 @@
 				<div class="col-6">
 					<ul class="list-inline social-links">
 						<li>
-							<a href=""><img :src="getURL('facebook')" alt="facebook" /></a>
+							<a @click="alert('Work in progress')"><img :src="getURL('facebook')" alt="facebook" /></a>
 						</li>
 						<li>
-							<a href=""><img :src="getURL('instagram')" alt="instagram" /></a>
+							<a @click="alert('Work in progress')"><img :src="getURL('instagram')" alt="instagram" /></a>
 						</li>
 						<li>
-							<a href=""><img :src="getURL('twitter')" alt="twitter" /></a>
+							<a @click="alert('Work in progress')"><img :src="getURL('twitter')" alt="twitter" /></a>
 						</li>
 					</ul>
 				</div>
@@ -96,6 +96,9 @@ export default {
 					break;
 			}
 		},
+		alert(msg) {
+			alert(msg);
+		}
 	},
 };
 </script>

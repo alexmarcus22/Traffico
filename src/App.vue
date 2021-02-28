@@ -20,19 +20,16 @@
 				</li>
 			</ul>
 		</sidebar-component>
-		<hero-component />
+		<hero-component :title="entries[0].hero.title" />
 		<details-component :reverse="false" dataImg="fade-left" id="about">
-			<template v-slot:subtitle> About Us </template>
+			<template v-slot:subtitle> {{entries[0].about.title}} </template>
 			<template v-slot:description>
-				The occupational traffic permit is one of the most important things in
-				the company when carrying out freight transport. In fact, it is a
-				prerequisite for doing business traffic at all.
+				{{entries[0].about.description}}
 			</template>
 			<template v-slot:cardBody>
 				<div class="card card-component">
 					<div class="card-body">
-						How do you do when you need to obtain a commercial traffic permit
-						for freight transport to your business?
+						{{entries[0].about.card}}
 					</div>
 				</div>
 			</template>
@@ -45,13 +42,9 @@
 			</template>
 		</details-component>
 		<details-component :reverse="true" dataText="fade-right" id="howTo">
-			<template v-slot:subtitle> How To Apply </template>
+			<template v-slot:subtitle> {{entries[0].apply.title}} </template>
 			<template v-slot:description>
-				When applying for a traffic permit, there are certain requirements that
-				you must meet that are included in the examination: requirements for
-				professional knowledge, solid establishment, good reputation and
-				financial resources. Important to remember is to confirm your
-				application for a traffic permit by the company's company signer or CEO.
+				{{entries[0].apply.description}}
 			</template>
 			<template v-slot:image>
 				<img
@@ -61,7 +54,7 @@
 				/>
 			</template>
 		</details-component>
-		<faq-component></faq-component>
+		<faq-component :accordionComponents="accordions"></faq-component>
 		<footer-component dataMobileText="fade-right">
 			<template v-slot:secondMobile>
 				<img
@@ -95,7 +88,6 @@
 			</contact-component>
 		</footer-component>
 	</div>
-	{{ entries.title }}
 </template>
 
 <style lang='scss'>
@@ -111,8 +103,6 @@ import Footer from "./page/shared/footer.component.vue";
 import Contact from "./page/components/contact.component.vue";
 import eventBus from "./store";
 import SPA from "./assets/js/SPA.json";
-import AOS from "aos";
-AOS.init();
 
 export default {
 	name: "App",
@@ -125,8 +115,9 @@ export default {
 		"contact-component": Contact,
 	},
 	data: () => ({
-		entries: {},
+		entries: SPA,
 		isPanelOpen: false,
+		accordions: SPA[0].faq.accordions
 	}),
 	methods: {
 		hideAndScrollTo(ref) {
@@ -139,12 +130,6 @@ export default {
 				el.scrollIntoView({ behavior: "smooth", block: "center" });
 			}, 200);
 		},
-	},
-	mounted() {
-		let self = this;
-		for (const value of Object.entries(SPA)) {
-			self.entries = value[0];
-		}
-	},
+	}
 };
 </script>

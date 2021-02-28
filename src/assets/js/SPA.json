@@ -1,8 +1,54 @@
-{
-  "SPA": [
-    {
-      "title": "Test",
-      "heroTitle": "asdasas"
+[
+  {
+    "hero": {
+      "title": "Your awesome traffic permit consultant."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "The occupational traffic permit is one of the most important things in the company when carrying out freight transport.  In fact, it is a prerequisite for doing business traffic at all. ",
+      "card": "How do you do when you need to obtain a commercial traffic permit for freight transport to your business?"
+    },
+    "apply": {
+      "title": "How to apply",
+      "description": "When applying for a traffic permit, there are certain requirements that you must meet that are included in the examination: requirements for professional knowledge, solid establishment, good reputation and financial resources. Important to remember is to confirm your application for a traffic permit by the company's company signer or CEO."
+    },
+    "faq": {
+      "title": "FAQ",
+      "description": "Questions and Answers on Professional Traffic Permits:",
+      "accordions": {
+        "1": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "2": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "3": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "4": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "5": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "6": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "7": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        "8": {
+          "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        }
+      }
     }
-  ]
-}
+  }
+]

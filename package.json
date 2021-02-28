@@ -25,7 +25,8 @@
     "eslint-plugin-vue": "^7.0.0-0",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
-    "vue-burger-menu": "^2.0.5"
+    "vue-burger-menu": "^2.0.5",
+    "vue-router": "^4.0.4"
   },
   "eslintConfig": {
     "root": true,
